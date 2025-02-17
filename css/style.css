@@ -3,8 +3,7 @@
 
 /* Step 1: Write selector/rule property to add an underline when
 links in the navigation are in the hover or focus state.*/
-nav a:hover,
-nav a:focus {
+nav a:hover {
   text-decoration: underline;
 }
 
@@ -12,17 +11,18 @@ nav a:focus {
 .skip {
   position: absolute;
   top: -40px;
-  left: 0;
 }
 
 /* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
 .skip:focus {
+  position: absolute;
   top: 20px;
+  visibility: visible;
 }
 
 /* Step 3: Write selector/rule property to style all elements when in focus*/
 *:focus {
-  outline: 2px solid;
+  border: 2px solid;
 }
 
 /* Step 4: Write selector/rule property to style the container */
